@@ -11,7 +11,57 @@
 
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body>
- <!-- //... -->
+<body class="bg-[var(--Very-dark-desaturated-blue-main)] w-screen h-screen">
+  <main class="calculator">
+
+    <div class="flex flex-row items-center justify-between">
+      <h1>calc</h1>
+      <div class="flex flex-row">
+        <p>theme</p>
+        <div class="flex flex-col items-center justify-center">
+          <div>
+            
+          </div>
+          <div class="flex flex-row">
+            <div class="flex flex-col items-center justify-center">
+              <label for="theme1">1</label>
+              <input type="radio" id="theme1">      
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <label for="theme2">2</label>
+              <input type="radio" id="theme2">      
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <label for="theme3">3</label>
+              <input type="radio" id="theme3">      
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <input type="text" id="result" readonly class="calculator__result">
+    <div class="calculator__buttons">
+      <button class="calculator__button" onclick="clearResult()">C</button>
+      <button class="calculator__button" onclick="deleteLastCharacter()">&larr;</button>
+      <button class="calculator__button" onclick="appendCharacter('/')">/</button>
+      <button class="calculator__button" onclick="appendCharacter('7')">7</button>
+      <button class="calculator__button" onclick="appendCharacter('8')">8</button>
+      <button class="calculator__button" onclick="appendCharacter('9')">9</button>
+      <button class="calculator__button" onclick="appendCharacter('*')">*</button>
+      <button class="calculator__button" onclick="appendCharacter('4')">4</button>
+      <button class="calculator__button" onclick="appendCharacter('5')">5</button>
+      <button class="calculator__button" onclick="appendCharacter('6')">6</button>
+      <button class="calculator__button" onclick="appendCharacter('-')">-</button>
+      <button class="calculator__button" onclick="appendCharacter('1')">1</button>
+      <button class="calculator__button" onclick="appendCharacter('2')">2</button>
+      <button class="calculator__button" onclick="appendCharacter('3')">3</button>
+      <button class="calculator__button" onclick="appendCharacter('+')">+</button>
+      <button class="calculator__button" onclick="appendCharacter('0')">0</button>
+      <button class="calculator__button" onclick="appendCharacter('.')">.</button>
+      <button class="calculator__button calculator__button--equals" onclick="calculate()">=</button>
+    </div>
+  </main>  
+  <script src="./js/script.js"></script>
 </body>
 </html>

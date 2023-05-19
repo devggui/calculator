@@ -10,9 +10,9 @@
   /* ### Theme 1 */
 
   /* #### Backgrounds */
-  --Very-dark-desaturated-blue: hsl(222, 26%, 31%); /* (main background) */
-  --Very-dark-desaturated-blue: hsl(223, 31%, 20%); /* (toggle background, keypad background) */
-  --Very-dark-desaturated-blue: hsl(224, 36%, 15%); /* (screen background) */
+  --Very-dark-desaturated-blue-main: hsl(222, 26%, 31%); /* (main background) */
+  --Very-dark-desaturated-blue-toogle: hsl(223, 31%, 20%); /* (toggle background, keypad background) */
+  --Very-dark-desaturated-blue-screen: hsl(224, 36%, 15%); /* (screen background) */
 
   /* #### Keys */
   --Desaturated-dark-blue: hsl(225, 21%, 49%); /* (key background) */
@@ -69,4 +69,46 @@
   --Light-yellow: hsl(52, 100%, 62%);
   --Very-dark-blue: hsl(198, 20%, 13%);
   --White: hsl(0, 0%, 100%);
+}
+
+.calculator {
+  max-width: 240px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f7fafc;
+}
+
+.calculator__result {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 24px;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.calculator__buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calculator__button {
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.calculator__button--equals {
+  grid-column: span 2;
+  background-color: #4f46e5;
+  color: #fff;
 }
