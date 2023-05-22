@@ -71,14 +71,73 @@
   --White: hsl(0, 0%, 100%);
 }
 
-.my-shadow-b-orange {
-  box-shadow: 0 5px var(--Grayish-orange);
+/* THEME - 1 */
+.theme-1 {
+  background-color: var(--Very-dark-desaturated-blue-main);
+
+  .title {
+    color: white;
+  }
+
+  .labels {
+    color: white;
+  }
+
+  .radio-group {
+    background-color: var(--Very-dark-desaturated-blue-toogle);
+  }
+
+  .radio-button:checked {
+    background-color: var(--Red);
+  }
+
+  .panel {
+    background-color: var(--Very-dark-desaturated-blue-screen);
+  }
+
+  .area-buttons {
+    background-color: var(--Very-dark-desaturated-blue-toogle);
+    color: var(--Very-dark-grayish-blue);
+  }
+
+  .normal-buttons {
+    background-color: var(--Light-grayish-orange);
+    box-shadow: 0 5px var(--Grayish-orange);
+  }
+
+  .del-reset-button {
+    background-color: var(--Desaturated-dark-blue-bg);
+    color: white;
+    box-shadow: 0 5px var(--Desaturated-dark-blue-sh);
+  }
+
+  .equals-button {
+    background-color: var(--Red);
+    color: white;
+    box-shadow: 0 5px var(--Dark-red);
+  }
 }
 
-.my-shadow-b-gray {
-  box-shadow: 0 5px var(--Desaturated-dark-blue-sh);
+.theme-2 {
+  background-color: var(--Light-gray);
+
+  .title {
+    color: black;
+  }
+
+  .labels {
+    color: black;
+  }
+
+  .radio-group {
+    background-color: var(--Grayish-red);
+  }
+
+  .radio-button:checked {
+    background-color: var(--Orange);
+  }
 }
 
-.my-shadow-b-red {
-  box-shadow: 0 5px var(--Dark-red);
+.theme-3 {
+  
 }
