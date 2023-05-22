@@ -16,7 +16,7 @@
 
   /* #### Keys */
   --Desaturated-dark-blue-bg: hsl(225, 21%, 49%); /* (key background) */
-  --Desaturated-dark-blue-sh: hsl(224, 28%, 35%); /* (key shadow) */  
+  --Desaturated-dark-blue-sh: hsl(224, 28%, 35%); /* (key shadow) */    
 
   --Red: hsl(6, 63%, 50%); /* (key background, toggle) */
   --Dark-red: hsl(6, 70%, 34%); /* (key shadow) */
@@ -82,5 +82,3 @@
 .my-shadow-b-red {
   box-shadow: 0 5px var(--Dark-red);
 }
-
-/* box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px; */

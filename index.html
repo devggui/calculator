@@ -11,8 +11,8 @@
 
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body class="bg-[var(--Very-dark-desaturated-blue-main)] w-screen h-max font-extrabold">
-  <main class="flex flex-col m-6">
+<body class="sm:flex sm:items-center sm:justify-center bg-[var(--Very-dark-desaturated-blue-main)] w-screen h-max sm:h-screen font-extrabold">
+  <main class="flex flex-col m-6 sm:max-w-xl">
     <div class="flex flex-row items-center justify-between mb-10 mt-5">
       <h1 class="text-white text-3xl">calc</h1>
       <div class="flex flex-col items-center justify-center">                 
@@ -24,35 +24,35 @@
           </div>          
           <div class="flex bg-[var(--Very-dark-desaturated-blue-toogle)] rounded-full items-center justify-center relative">
             <span class="absolute -left-20 text-white text-xs font-extrabold tracking-widest">THEME</span>
-            <input class="w-5 h-5 m-1 appearance-none checked:bg-[var(--Red)] rounded-full" type="radio" id="theme1" value="theme1" name="radio-group" checked>      
-            <input class="w-5 h-5 m-1 appearance-none checked:bg-[var(--Red)] rounded-full" type="radio" id="theme2" value="theme2" name="radio-group">      
-            <input class="w-5 h-5 m-1 appearance-none checked:bg-[var(--Red)] rounded-full" type="radio" id="theme3" value="theme3" name="radio-group">      
+            <input class="w-5 h-5 m-1 sm:cursor-pointer appearance-none checked:bg-[var(--Red)] rounded-full" type="radio" id="theme1" value="theme1" name="radio-group" checked>      
+            <input class="w-5 h-5 m-1 sm:cursor-pointer appearance-none checked:bg-[var(--Red)] rounded-full" type="radio" id="theme2" value="theme2" name="radio-group">      
+            <input class="w-5 h-5 m-1 sm:cursor-pointer appearance-none checked:bg-[var(--Red)] rounded-full" type="radio" id="theme3" value="theme3" name="radio-group">      
           </div>
         </div>
       </div>      
     </div>
 
-    <input class="bg-[var(--Very-dark-desaturated-blue-screen)] p-6 mb-6 rounded-xl text-4xl text-white text-right" type="text" id="panel" value="399,981" readonly>
+    <input class="bg-[var(--Very-dark-desaturated-blue-screen)] p-6 mb-6 rounded-xl text-4xl text-white text-right outline-0" type="text" id="panel" value="399,981" readonly>
     
     <div class="grid grid-cols-4 grid-rows-5 gap-4 bg-[var(--Very-dark-desaturated-blue-toogle)] p-6 rounded-xl text-[var(--Very-dark-grayish-blue)] text-3xl text-center">
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('7')">7</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('8')">8</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('9')">9</button>
-      <button class="bg-[var(--Desaturated-dark-blue-bg)] text-[var(--White)] w-16 h-16 my-shadow-b-gray rounded-md text-xl" onclick="clearResult()">DEL</button>    
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('4')">4</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('5')">5</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('6')">6</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('+')">+</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('1')">1</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('2')">2</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('3')">3</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('-')">-</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('.')">.</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('0')">0</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('/')">/</button>
-      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('*')">x</button>
-      <button class="col-start-1 col-span-2 bg-[var(--Desaturated-dark-blue-bg)] text-[var(--White)] text-xl w-full h-14 my-shadow-b-gray rounded-md" onclick="deleteLastCharacter()">RESET</button>
-      <button class="col-start-3 col-span-2 bg-[var(--Red)] text-[var(--White)] w-full h-14 my-shadow-b-red rounded-md" onclick="calculate()">=</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('7')">7</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('8')">8</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('9')">9</button>
+      <button class="bg-[var(--Desaturated-dark-blue-bg)] text-[var(--White)] w-full h-16 my-shadow-b-gray rounded-md hover:opacity-80  text-xl" onclick="clearResult()">DEL</button>    
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('4')">4</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('5')">5</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('6')">6</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('+')">+</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('1')">1</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('2')">2</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('3')">3</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('-')">-</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('.')">.</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('0')">0</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('/')">/</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-full h-16 my-shadow-b-orange rounded-md hover:opacity-80 " onclick="appendCharacter('*')">x</button>
+      <button class="col-start-1 col-span-2 bg-[var(--Desaturated-dark-blue-bg)] text-[var(--White)] text-xl w-full h-14 my-shadow-b-gray rounded-md hover:opacity-80 " onclick="deleteLastCharacter()">RESET</button>
+      <button class="col-start-3 col-span-2 bg-[var(--Red)] text-[var(--White)] w-full h-14 my-shadow-b-red rounded-md hover:opacity-80 " onclick="calculate()">=</button>
     </div>
   </main>  
   <script src="./js/script.js"></script>
