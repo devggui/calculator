@@ -11,55 +11,48 @@
 
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body class="bg-[var(--Very-dark-desaturated-blue-main)] w-screen h-screen">
-  <main class="calculator">
-
-    <div class="flex flex-row items-center justify-between">
-      <h1>calc</h1>
-      <div class="flex flex-row">
-        <p>theme</p>
-        <div class="flex flex-col items-center justify-center">
-          <div>
-            
-          </div>
-          <div class="flex flex-row">
-            <div class="flex flex-col items-center justify-center">
-              <label for="theme1">1</label>
-              <input type="radio" id="theme1">      
-            </div>
-            <div class="flex flex-col items-center justify-center">
-              <label for="theme2">2</label>
-              <input type="radio" id="theme2">      
-            </div>
-            <div class="flex flex-col items-center justify-center">
-              <label for="theme3">3</label>
-              <input type="radio" id="theme3">      
-            </div>            
+<body class="bg-[var(--Very-dark-desaturated-blue-main)] w-screen h-max font-extrabold">
+  <main class="flex flex-col m-6">
+    <div class="flex flex-row items-center justify-between mb-10 mt-5">
+      <h1 class="text-white text-3xl">calc</h1>
+      <div class="flex flex-col items-center justify-center">                 
+        <div class="flex flex-col items-center justify-center text-center">
+          <div class="flex flex-row items-center justify-between text-center w-full px-[0.6rem] mb-1">
+            <label class="text-sm text-white" for="theme1">1</label>              
+            <label class="text-sm text-white" for="theme2">2</label>              
+            <label class="text-sm text-white" for="theme3">3</label>              
+          </div>          
+          <div class="flex bg-[var(--Very-dark-desaturated-blue-toogle)] rounded-full items-center justify-center relative">
+            <span class="absolute -left-20 text-white text-xs font-extrabold tracking-widest">THEME</span>
+            <input class="w-5 h-5 m-1 appearance-none checked:bg-[var(--Red)] rounded-full" type="radio" id="theme1" value="theme1" name="radio-group" checked>      
+            <input class="w-5 h-5 m-1 appearance-none checked:bg-[var(--Red)] rounded-full" type="radio" id="theme2" value="theme2" name="radio-group">      
+            <input class="w-5 h-5 m-1 appearance-none checked:bg-[var(--Red)] rounded-full" type="radio" id="theme3" value="theme3" name="radio-group">      
           </div>
         </div>
-      </div>
+      </div>      
     </div>
 
-    <input type="text" id="result" readonly class="calculator__result">
-    <div class="calculator__buttons">
-      <button class="calculator__button" onclick="clearResult()">C</button>
-      <button class="calculator__button" onclick="deleteLastCharacter()">&larr;</button>
-      <button class="calculator__button" onclick="appendCharacter('/')">/</button>
-      <button class="calculator__button" onclick="appendCharacter('7')">7</button>
-      <button class="calculator__button" onclick="appendCharacter('8')">8</button>
-      <button class="calculator__button" onclick="appendCharacter('9')">9</button>
-      <button class="calculator__button" onclick="appendCharacter('*')">*</button>
-      <button class="calculator__button" onclick="appendCharacter('4')">4</button>
-      <button class="calculator__button" onclick="appendCharacter('5')">5</button>
-      <button class="calculator__button" onclick="appendCharacter('6')">6</button>
-      <button class="calculator__button" onclick="appendCharacter('-')">-</button>
-      <button class="calculator__button" onclick="appendCharacter('1')">1</button>
-      <button class="calculator__button" onclick="appendCharacter('2')">2</button>
-      <button class="calculator__button" onclick="appendCharacter('3')">3</button>
-      <button class="calculator__button" onclick="appendCharacter('+')">+</button>
-      <button class="calculator__button" onclick="appendCharacter('0')">0</button>
-      <button class="calculator__button" onclick="appendCharacter('.')">.</button>
-      <button class="calculator__button calculator__button--equals" onclick="calculate()">=</button>
+    <input class="bg-[var(--Very-dark-desaturated-blue-screen)] p-6 mb-6 rounded-xl text-4xl text-white text-right" type="text" id="panel" value="399,981" readonly>
+    
+    <div class="grid grid-cols-4 grid-rows-5 gap-4 bg-[var(--Very-dark-desaturated-blue-toogle)] p-6 rounded-xl text-[var(--Very-dark-grayish-blue)] text-3xl text-center">
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('7')">7</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('8')">8</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('9')">9</button>
+      <button class="bg-[var(--Desaturated-dark-blue-bg)] text-[var(--White)] w-16 h-16 my-shadow-b-gray rounded-md text-xl" onclick="clearResult()">DEL</button>    
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('4')">4</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('5')">5</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('6')">6</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('+')">+</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('1')">1</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('2')">2</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('3')">3</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('-')">-</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('.')">.</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('0')">0</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('/')">/</button>
+      <button class="bg-[var(--Light-grayish-orange)] w-16 h-16 my-shadow-b-orange rounded-md" onclick="appendCharacter('*')">x</button>
+      <button class="col-start-1 col-span-2 bg-[var(--Desaturated-dark-blue-bg)] text-[var(--White)] text-xl w-full h-14 my-shadow-b-gray rounded-md" onclick="deleteLastCharacter()">RESET</button>
+      <button class="col-start-3 col-span-2 bg-[var(--Red)] text-[var(--White)] w-full h-14 my-shadow-b-red rounded-md" onclick="calculate()">=</button>
     </div>
   </main>  
   <script src="./js/script.js"></script>
