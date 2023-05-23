@@ -52,8 +52,8 @@
   /* ### Theme 3 */
 
   /* #### Backgrounds */
-  --Very-dark-violet: hsl(268, 75%, 9%); /*(main background)*/
-  --Very-dark-violet: hsl(268, 71%, 12%); /*(toggle background, keypad background, screen background)*/
+  --Very-dark-violet-bg: hsl(268, 75%, 9%); /*(main background)*/
+  --Very-dark-violet-toggle: hsl(268, 71%, 12%); /*(toggle background, keypad background, screen background)*/
 
   /* #### Keys */
   --Dark-violet: hsl(281, 89%, 26%); /*(key background)*/
@@ -93,6 +93,7 @@
 
   .panel {
     background-color: var(--Very-dark-desaturated-blue-screen);
+    color: white;
   }
 
   .area-buttons {
@@ -136,8 +137,78 @@
   .radio-button:checked {
     background-color: var(--Orange);
   }
+
+  .panel {
+    background-color: var(--Very-light-gray);
+    color: var(--Very-dark-grayish-yellow);
+  }
+
+  .area-buttons {
+    background-color: var(--Grayish-red);
+    color: var(--Very-dark-grayish-yellow);
+  }
+
+  .normal-buttons {
+    background-color: var(--Light-grayish-yellow);
+    box-shadow: 0 5px var(--Dark-grayish-orange);
+  }
+
+  .del-reset-button {
+    background-color: var(--Dark-moderate-cyan);
+    color: white;
+    box-shadow: 0 5px var(--Very-dark-cyan);
+  }
+
+  .equals-button {
+    background-color: var(--Orange);
+    color: white;
+    box-shadow: 0 5px var(--Dark-orange);
+  }
 }
 
 .theme-3 {
-  
+  background-color: var(--Very-dark-violet-bg);
+
+  .title {
+    color: var(--Light-yellow);
+  }
+
+  .labels {
+    color: var(--Light-yellow);
+  }
+
+  .radio-group {
+    background-color: var(--Very-dark-violet-toggle);
+  }
+
+  .radio-button:checked {
+    background-color: var(--Pure-cyan);
+  }
+
+  .panel {
+    background-color: var(--Very-dark-violet-toggle);
+    color: var(--Light-yellow);
+  }
+
+  .area-buttons {
+    background-color: var(--Very-dark-violet-toggle);
+    color: var(--Light-yellow);
+  }
+
+  .normal-buttons {
+    background-color: var(--Very-dark-violet);
+    box-shadow: 0 5px var(--Dark-magenta);
+  }
+
+  .del-reset-button {
+    background-color: var(--Dark-violet);
+    color: white;
+    box-shadow: 0 5px var(--Vivid-magenta);
+  }
+
+  .equals-button {
+    background-color: var(--Pure-cyan);
+    color: var(--Very-dark-blue);
+    box-shadow: 0 5px var(--Soft-cyan);
+  }
 }

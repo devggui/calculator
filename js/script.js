@@ -2,17 +2,25 @@ const theme1 = document.getElementById('theme1')
 const theme2 = document.getElementById('theme2')
 const theme3 = document.getElementById('theme3')
 
+const body = document.getElementById('body')
+
 theme1.addEventListener('change', toggleTheme)
 theme2.addEventListener('change', toggleTheme)
 theme3.addEventListener('change', toggleTheme)
 
 function toggleTheme() {
   if(theme1.checked) {
-    console.log('tema 1')
+    body.classList.add('theme-1')
+    body.classList.remove('theme-2')
+    body.classList.remove('theme-3')
   } else if(theme2.checked) {
-    console.log('tema 2')
+    body.classList.remove('theme-1')
+    body.classList.add('theme-2')
+    body.classList.remove('theme-3')
   } else {
-    console.log('tema 3')
+    body.classList.remove('theme-1')
+    body.classList.remove('theme-2')
+    body.classList.add('theme-3')
   }
 }
 
